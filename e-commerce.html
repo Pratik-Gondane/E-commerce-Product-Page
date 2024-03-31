@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" href="e-commerce.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Mobile<span>Shop</span></a>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Team</a>
+                <a href="#">FAQ</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="product-box">
+                <div class="all-images">x
+                    <div class="small-images">
+                        <img src="images/p1.jpg" alt="user1" onclick="clicking(this)">
+                        <img src="images/p3.jpg" alt="user1" onclick="clicking(this)">
+                        <img src="images/p2.jpg" alt="user1" onclick="clicking(this)">
+                        <img src="images/p5.jpg" alt="user1" onclick="clicking(this)">
+                    </div>
+                    <div class="main-images">
+                        <img src="images/p1.jpg" id="imagebox">
+                    </div>
+                </div>
+            </div>
+            <div class="text">
+                <div class="content">
+                    <p class="brand">Brand :  Samsung</p>
+                    <h2>Samsung Galaxy S23 5G (Lavender, 8GB, 256GB Storage)</h2>
+                    <div class="review">
+                        <span>(4.6)</span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="price-box">
+                        <p class="price"> ₹69,999</p>
+                        <strike>₹72,999</strike>
+                    </div>
+                    <p>Size : <select name="size">
+                        <option value="select color">Select Colour</option>
+                        <option value="Lavender">Lavender</option>
+                        <option value="Green">Green</option>
+                        <option value="White">White</option>
+                        <option value="Blue">Blue</option>
+                    </select></p>
+                </div>
+                <p>Quantity <input type="text" value="1"></p>
+                <button>
+                    <span class="fa fa-shopping-cart"></span>
+                    Add to Cart
+                </button>
+                <button class="buy">
+                    <span class="fa fa-shopping-cart"></span>
+                    Buy now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function clicking(smallImg){
+            var fullImg = document.getElementById('imagebox')
+            fullImg.src = smallImg.src
+        }
+    </script>
+</body>
+</html>
